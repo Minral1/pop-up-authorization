@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.authentication .logo {
+  margin-left: 17px;
+  width: 200px;
+  height: 50px;
+}
+
+.authentication input {
+  display: block;
+  width: 100%;
+  padding: 8px 5%;
+  margin-bottom: 0; /* отступ теперь у input-wrapper */
+  border-style: solid;
+  border-width: 1px;
+  border-color: #a79881;
+  background: none;
+  color: #AEAEAE;
+  outline: none;
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.text {
+  margin-top: 3px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  font-weight: 650;
+  color: #575045;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.main-popup {
+  margin-top: 175px;
+}
+
+.main-no-popup {
+  margin-top: 0;
+}
+
+.model-popup {
+  position: absolute;
+  z-index: 10;
+  padding: 40px 20px 20px 20px;
+  width: 250px;
+  min-height: 320px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-style: solid;
+  border-color: #FFFFFF;
+  border-radius: 19px;
+  box-shadow: 0px 8px 27px #AEAEAE;
+  animation-duration: 0.55s;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+  box-sizing: border-box;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, -100%, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.authentication button {
+  border-style: none;
+  padding: 8px 5%;
+  margin-top: 10px;
+  width: 100%;
+  background: #a79881;
+  color: white;
+  font-size: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main-no-popup .model-popup {
+  display: none;
+}
+
+.auth-error {
+  color: #a79881;
+  font-size: 12px;
+  margin: 5px 0 10px 0;
+  text-align: center;
+  min-height: 18px; /* резервируем место, чтобы не сдвигать поля */
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.input-wrapper input {
+  display: block;
+  width: 100%;
+  padding: 8px 5%;
+  border: 1px solid #D6D6D6;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #AEAEAE;
+  background: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-error {
+  border-color: #a79881 !important;
+}
+
+.field-error {
+  color: #a79881;
+  font-size: 10px;
+  margin-top: 4px;
+  line-height: 1.2;
+  min-height: 14px; /* резервируем высоту под ошибку, чтобы не было прыжков */
+}
+
